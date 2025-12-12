@@ -1,0 +1,10 @@
+create backend folder and install
+
+"npm i express cors dotenv jsonwebtoken mongoose nodemon bcryptjs"
+
+
+"npm init -y"
+package.json:
+script:
+"start": "nodemon index.js",
+
