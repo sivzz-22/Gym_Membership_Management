@@ -16,7 +16,7 @@ function Dashboard({ token, setToken }) {
 
     const fetchCustomers = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/readCustomer', {
+            const response = await fetch('https://gym-membership-management.onrender.com/api/readCustomer', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },
@@ -35,7 +35,7 @@ function Dashboard({ token, setToken }) {
     const handleAdd = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/api/Customer', {
+            const response = await fetch('https://gym-membership-management.onrender.com/api/Customer', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ function Dashboard({ token, setToken }) {
     const handleUpdate = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:5000/api/Customer/${editingId}`, {
+            const response = await fetch(`https://gym-membership-management.onrender.com/api/Customer/${editingId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ function Dashboard({ token, setToken }) {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/Customer/${id}`, {
+            const response = await fetch(`https://gym-membership-management.onrender.com/api/Customer/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,
